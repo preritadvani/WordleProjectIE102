@@ -10,10 +10,11 @@ WORD_LENGTH = 5
 MAX_ATTEMPTS = 6
 
 # Example word list (replace with larger list if needed)
-WORD_LIST = [
-    "apple", "grape", "stone", "chair", "table",
-    "water", "plant", "light", "sound", "dream"
-]
+
+allowed=[]
+with open("allowed.txt") as f:
+    allowed = [w.strip() for w in f]
+WORD_LIST = allowed
 
 GREEN = "\033[92m"
 YELLOW = "\033[93m"
